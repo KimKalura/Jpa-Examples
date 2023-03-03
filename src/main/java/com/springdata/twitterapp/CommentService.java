@@ -39,7 +39,6 @@ public class CommentService {
         //2. (in java) care sunt com care apartin unui anumit user
         List<Comment> comments = commentRepository.findAll();
         return comments.stream().filter(c->c.getTweet().getUser().getId() == user.getId()).collect(Collectors.toList());
-
     }
 
 }
